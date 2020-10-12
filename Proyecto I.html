@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cálculo de gravedad</title>
+
+    <style media="screen">
+      body
+      {
+        font-family: Tahoma;
+        background: green;
+        color: white;
+      }
+      p
+      {
+        font-family: cursive;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <h1>Aquí se calcula la gravedad en otro planeta</h1>
+    <h2>A continuación el cálculo</h2>
+    <p>Verifica cuál es tu peso en el <strong>planeta</strong> seleccionado</p>
+    <script type="text/javascript">
+
+    alert("Esto está funcionando!");
+
+    var pesoUsuario = prompt("Ingresa tu peso en la tierra");
+    var peso = parseInt(pesoUsuario);
+    var nPlaneta = parseInt(prompt("Si ingresas 1 sabrás tu peso en marte\n y 2 es jupiter"));
+    'nPlaneta =  parseInt(nPlaneta);'
+    var gMarte = 3.7;
+    var gTierra = 9.8;
+    var gJupiter = 24.8;
+    var pesoFinal;
+    var planeta;
+
+    if (nPlaneta == 1)
+    {
+     pesoFinal = peso * gMarte / gTierra;
+     pesoFinal = pesoFinal.toFixed(2);
+     planeta = "Marte";
+     document.write("Tu peso en " +planeta+" es "+pesoFinal+"<br/><p><p/>");
+    }
+    else if (nPlaneta == 2)
+    {
+      pesoFinal = peso * gJupiter / gTierra;
+      pesoFinal = pesoFinal.toFixed(2);
+      planeta = "Jupiter";
+      document.write("Tu peso en " +planeta+" es "+pesoFinal+"<br/><p><p/>");
+    }
+    else
+    {
+      document.write("Los numeros ingresados no son ni 1 ni 2 <br/><p><p/>");
+    }
+
+    var ruta = window.location;
+    document.write(ruta);
+
+    </script>
+  </body>
+</html>
